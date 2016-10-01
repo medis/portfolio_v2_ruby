@@ -20,10 +20,6 @@ set :rbenv_roles, :all # default value
 after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
-  desc "No ActiveRecord override"
-  task :migrate do
-  end
-  
   task :restart do
     invoke 'unicorn:reload'
   end
