@@ -26,6 +26,7 @@ require "capistrano/deploy"
 require 'capistrano/setup'
 require 'capistrano/deploy'
 require 'capistrano/rbenv'
+require 'capistrano/rbenv_vars'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 #require 'capistrano/rails/migrations'
