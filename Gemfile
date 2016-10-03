@@ -46,6 +46,9 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-rbenv-vars'
   gem 'capistrano3-unicorn'
+  gem 'normalize-scss'
+  gem 'susy'
+  gem "breakpoint"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

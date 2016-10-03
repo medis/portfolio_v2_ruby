@@ -1,0 +1,12 @@
+@import "susy";
+
+$susy: (
+  columns: 12,
+  container: 70em,
+  gutters: 1/4, // The size of a gutter in relation to a single column
+  global-box-sizing: border-box,
+);
+
+.container {
+  @include container;
+}

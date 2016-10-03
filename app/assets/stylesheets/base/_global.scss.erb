@@ -1,0 +1,12 @@
+@import "../vendors/typography";
+@import "normalize";
+
+// Include typography styles.
+@include typographic();
+
+// Include normalize styles.
+@include normalize();
+
+body {
+  background-image: url(<%= asset_path('bg.jpg') %>);
+}
