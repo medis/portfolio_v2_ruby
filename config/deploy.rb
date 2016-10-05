@@ -79,7 +79,7 @@ namespace :deploy do
       # clean up
       run_locally { execute "rm -rf #{local_dir}" }
     end
-
+  end
 end
 
 # Default branch is :master
