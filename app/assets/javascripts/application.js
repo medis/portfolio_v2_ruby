@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.easing/jquery.easing.1.3
+//= require iconmenu/jquery.iconmenu
 //= require_tree .

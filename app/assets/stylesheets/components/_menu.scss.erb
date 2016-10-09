@@ -1,0 +1,77 @@
+@import "susy";
+
+nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			a {
+				display: block;
+				padding: 2em 1em;
+				text-decoration: none;
+				transition: background-color 0.3s ease;
+				background-color: transparent;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+nav a {
+	&:hover, &:focus {
+		background-color: #2e323b;
+
+		h2, h3 {
+			color: #FFF;
+			border-color: #FFF;
+			-webkit-animation: slideInUp .5s;
+	    animation: slideInUp .5s;
+		}
+
+		.icon {
+			display: none;
+			&.hover {
+				display: block;
+			}
+		}
+	}
+}
+
+nav li .icon {
+	padding-bottom: 15px;
+	&.hover {
+		display: none;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+	&.about {
+
+	}
+}
+
+nav {
+	h2 {
+		font-size: 1.5em;
+		text-align: center;
+		margin: 0;
+		border-bottom: 1px solid #21211f;
+		padding-bottom: 5px;
+		color: #2b323c;
+	}
+	h3 {
+		margin: 0;
+		font-size: 1em;
+		line-height: 1.2;
+		padding-top: 10px;
+		text-align: center;
+		color: #2b323c;
+	}
+}
+
+nav li {
+	@include span(2 of 12 no-gutter);
+}

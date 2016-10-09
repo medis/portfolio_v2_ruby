@@ -1,12 +1,24 @@
 @import "../vendors/typography";
 @import "normalize";
 
-// Include typography styles.
-@include typographic();
-
 // Include normalize styles.
 @include normalize();
 
 body {
   background-image: url(<%= asset_path('bg.jpg') %>);
 }
+
+@font-face {
+  font-family: 'NotoSans-Regular';
+  src: font-url('NotoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NotoSans-Bold';
+  src: font-url('NotoSans-Bold.ttf') format('truetype');
+}
+
+$body-font: 'NotoSans-Regular';
+$heading-font: 'NotoSans-Regular';
+
+// Include typography styles.
+@include typographic();
