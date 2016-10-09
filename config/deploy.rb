@@ -23,10 +23,9 @@ set :keep_assets, 2
 Rake::Task["deploy:compile_assets"].clear
 
 after 'deploy:publishing', 'deploy:restart'
-
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:reload'
+    invoke 'unicorn:restart'
   end
 
   desc 'Compile assets'
