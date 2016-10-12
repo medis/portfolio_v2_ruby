@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require jquery.easing/jquery.easing.1.3
 //= require iconmenu/jquery.iconmenu
+//= require stickyNavbar.js/jquery.stickyNavbar.min
 //= require_tree .

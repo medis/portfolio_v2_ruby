@@ -34,7 +34,7 @@ nav {
 }
 
 nav a {
-	&:hover, &:focus {
+	&:hover, &:focus, &.active {
 		background-color: #2e323b;
 
 		h2, h3 {
@@ -83,5 +83,23 @@ nav {
 		padding-top: 10px;
 		text-align: center;
 		color: #2b323c;
+	}
+}
+
+#header.sticky {
+	top: 0;
+  left: 50%;
+  margin-left: -35em;
+	nav {
+		width: 40%;
+		h2, h3 {
+			display: none;
+		}
+		.icon {
+			padding-bottom: 0;
+		}
+		ul li a {
+			padding: 1em;
+		}
 	}
 }
