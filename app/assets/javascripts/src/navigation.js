@@ -1,7 +1,9 @@
 (function($) {
-  $(document).ready(function() {
-    $('#header').stickyNavbar({
-      startAt: 720
-    });
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('nav').addClass('shrink');
+    } else {
+      $('nav').removeClass('shrink');
+    }
   });
 })(jQuery);

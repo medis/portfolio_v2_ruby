@@ -1,11 +1,19 @@
-@import "../vendors/typography";
+/*@import "../vendors/typography";
 @import "normalize";
 
 // Include normalize styles.
 @include normalize();
 
+$body-font: 'NotoSans-Regular';
+$heading-font: 'NotoSans-Regular';
+
+// Include typography styles.
+@include typographic();
+*/
+
 body {
   background-image: url(<%= asset_path('bg.jpg') %>);
+  padding-top: 271px;
 }
 
 @font-face {
@@ -17,8 +25,10 @@ body {
   src: font-url('NotoSans-Bold.ttf') format('truetype');
 }
 
-$body-font: 'NotoSans-Regular';
-$heading-font: 'NotoSans-Regular';
-
-// Include typography styles.
-@include typographic();
+/**
+* Remove gutter padding.
+*/
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}

@@ -1,49 +1,57 @@
-<div id="logo">
-  <a href="/" alt="Home" title="Home">
-    <%= image_tag('logo.png') %>
-  </a>
-</div>
-<nav>
-  <ul>
-    <li>
-      <a href="#about">
-        <div class="icon about"><%= image_tag('about.png') %></div>
-        <div class="icon about hover"><%= image_tag('about_hover.png') %></div>
-        <h2>ABOUT</h2>
-        <h3>Little something about me</h3>
-      </a>
-    </li>
-    <li>
-      <a href="#work">
-        <div class="icon work"><%= image_tag('work.png') %></div>
-        <div class="icon work hover"><%= image_tag('work_hover.png') %></div>
-        <h2>PORTFOLIO</h2>
-        <h3>Some of my work for your eyes only</h3>
-      </a>
-    </li>
-    <li>
-      <a href="#articles">
-        <div class="icon articles"><%= image_tag('articles.png') %></div>
-        <div class="icon articles hover"><%= image_tag('articles_hover.png') %></div>
-        <h2>ARTICLES</h2>
-        <h3>Read what I have to say</h3>
-      </a>
-    </li>
-    <li>
-      <a href="#projects">
-        <div class="icon projects"><%= image_tag('projects.png') %></div>
-        <div class="icon projects hover"><%= image_tag('projects_hover.png') %></div>
-        <h2>PROJECTS</h2>
-        <h3>See my other projects</h3>
-      </a>
-    </li>
-    <li>
-      <a href="#contact">
-        <div class="icon contact"><%= image_tag('contact.png') %></div>
-        <div class="icon contact hover"><%= image_tag('contact_hover.png') %></div>
-        <h2>CONTACT</h2>
-        <h3>Get in touch with me</h3>
-      </a>
-    </li>
-  </ul>
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <ul class="nav no-gutter">
+      <li class="logo col-md-2">
+        <a href="/" alt="Home" title="Home">
+          <%= image_tag('logo.png') %>
+          <%= image_tag('logo_white.png', :class => 'white') %>
+        </a>
+      </li>
+      <li class="link col-md-2">
+        <a href="#about">
+          <div class="icon about"><%= image_tag('about.png') %></div>
+          <div class="icon about hover"><%= image_tag('about_hover.png') %></div>
+          <div class="icon about white"><%= image_tag('about_white.png') %></div>
+          <h2>ABOUT</h2>
+          <div class="description">Little something about me</div>
+        </a>
+      </li>
+      <li class="link col-md-2">
+        <a href="#work">
+          <div class="icon work"><%= image_tag('work.png') %></div>
+          <div class="icon work hover"><%= image_tag('work_hover.png') %></div>
+          <div class="icon work white"><%= image_tag('work_white.png') %></div>
+          <h2>PORTFOLIO</h2>
+          <div class="description">Some of my work for your eyes only</div>
+        </a>
+      </li>
+      <li class="link col-md-2">
+        <a href="#articles">
+          <div class="icon articles"><%= image_tag('articles.png') %></div>
+          <div class="icon articles hover"><%= image_tag('articles_hover.png') %></div>
+          <div class="icon articles white"><%= image_tag('articles_white.png') %></div>
+          <h2>ARTICLES</h2>
+          <div class="description">Read what I have to say</div>
+        </a>
+      </li>
+      <li class="link col-md-2">
+        <a href="#projects">
+          <div class="icon projects"><%= image_tag('projects.png') %></div>
+          <div class="icon projects hover"><%= image_tag('projects_hover.png') %></div>
+          <div class="icon projects white"><%= image_tag('projects_white.png') %></div>
+          <h2>PROJECTS</h2>
+          <div class="description">See my other projects</div>
+        </a>
+      </li>
+      <li class="link col-md-2">
+        <a href="#contact">
+          <div class="icon contact"><%= image_tag('contact.png') %></div>
+          <div class="icon contact hover"><%= image_tag('contact_hover.png') %></div>
+          <div class="icon contact white"><%= image_tag('contact_white.png') %></div>
+          <h2>CONTACT</h2>
+          <div class="description">Get in touch with me</div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>

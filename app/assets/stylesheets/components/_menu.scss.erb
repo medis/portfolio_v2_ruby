@@ -1,24 +1,15 @@
 @import "susy";
-#logo {
-	@include span(2 of 12 no-gutter);
-	a {
-		padding: 2em 1em 0 0;
-		display: block;
-	}
-	img {
-		width: 100%;
-		height: auto;
-	}
-}
+
 nav {
-	@include span(10 of 12 no-gutter);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 	ul {
 		@include container;
 		margin: 0;
 		padding: 0;
 		list-style: none;
 		li {
-			width: 20%;
+			width: 16.66%;
 			display: block;
 			float: left;
 			a {
@@ -29,15 +20,28 @@ nav {
 				background-color: transparent;
 				overflow: hidden;
 			}
+			&.logo {
+				a {
+					padding: 2em 1em 0 0;
+					display: block;
+				}
+				img {
+					width: 100%;
+					height: auto;
+					&.white {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 }
 
-nav a {
+nav li.link a {
 	&:hover, &:focus, &.active {
 		background-color: #2e323b;
 
-		h2, h3 {
+		h2, div.description {
 			color: #FFF;
 			border-color: #FFF;
 			-webkit-animation: slideInUp .5s;
@@ -55,28 +59,26 @@ nav a {
 
 nav li .icon {
 	padding-bottom: 15px;
-	&.hover {
+	&.hover,
+	&.white {
 		display: none;
 	}
 	img {
 		width: 100%;
 		height: auto;
 	}
-	&.about {
-
-	}
 }
 
 nav {
 	h2 {
-		font-size: 1.5em;
+		font-size: 1.35em;
 		text-align: center;
 		margin: 0;
 		border-bottom: 1px solid #21211f;
 		padding-bottom: 5px;
 		color: #2b323c;
 	}
-	h3 {
+	div.description {
 		margin: 0;
 		font-size: .9em;
 		line-height: 1.2;
@@ -86,20 +88,47 @@ nav {
 	}
 }
 
-#header.sticky {
-	top: 0;
-  left: 50%;
-  margin-left: -35em;
-	nav {
-		width: 40%;
-		h2, h3 {
+#header {
+	background: #2e323b;
+	nav.shrink {
+		h2, div.description {
 			display: none;
 		}
 		.icon {
 			padding-bottom: 0;
+			display: none;
+			&.white {
+				display: block;
+			}
 		}
-		ul li a {
-			padding: 1em;
+		ul {
+			max-width: 50%;
+			margin: 0 auto;
+		}
+		ul li {
+			&.logo img {
+				display: none;
+				&.white {
+					display: block;
+				}
+			}
+			a {
+				padding: 1em;
+				&:hover, &:focus {
+					.icon {
+						display: none;
+						&.hover {
+							display: block;
+						}
+					}
+				}
+			}
+			&.active .icon {
+				display: none;
+				&.hover {
+					display: block;
+				}
+			}
 		}
 	}
 }
