@@ -11,11 +11,6 @@ $heading-font: 'NotoSans-Regular';
 @include typographic();
 */
 
-body {
-  background-image: url(<%= asset_path('bg.jpg') %>);
-  padding-top: 271px;
-}
-
 @font-face {
   font-family: 'NotoSans-Regular';
   src: font-url('NotoSans-Regular.ttf') format('truetype');
@@ -23,6 +18,12 @@ body {
 @font-face {
   font-family: 'NotoSans-Bold';
   src: font-url('NotoSans-Bold.ttf') format('truetype');
+}
+
+body {
+  background-image: url(<%= asset_path('bg.jpg') %>);
+  padding-top: 271px;
+  font-family: 'NotoSans-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /**
