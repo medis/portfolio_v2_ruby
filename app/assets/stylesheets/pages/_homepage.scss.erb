@@ -37,9 +37,6 @@
   }
 }
 
-.section {
-  height: 1000px;
-}
 .section-title {
   position: relative;
   h2 {
@@ -94,5 +91,20 @@
   }
   .right {
     float: right;
+  }
+}
+
+.design-image {
+  text-align: center;
+  background: url(<%= asset_path('design_bg.png') %>) repeat-x 0 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: $screen-lg-min) {
+    img {
+      width: auto;
+      height: 100%;
+    }
   }
 }
