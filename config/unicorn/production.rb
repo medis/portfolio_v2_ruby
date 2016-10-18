@@ -8,7 +8,7 @@ stdout_path "#{root}/log/unicorn.log"
 
 worker_processes Integer(ENV['WEB_CONCURRENCY'] || 1)
 timeout 30
-preload_app true
+preload_app false
 
 listen '/tmp/unicorn_portfolio.sock', backlog: 64
 
