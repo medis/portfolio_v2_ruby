@@ -96,10 +96,27 @@
 
 .design-image {
   text-align: center;
-  background: url(<%= asset_path('design_bg.png') %>) repeat-x 0 0;
+  position: relative;
+  .design_bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    &.left {
+      left: 0;
+      right: 50%;
+      background: url(<%= asset_path('design_left.jpg') %>) repeat-x 0 0;
+    }
+    &.right {
+      right: 0;
+      left: 50%;
+      background: url(<%= asset_path('design_right.png') %>) repeat-x 0 0;
+    }
+  }
+
   img {
     width: 100%;
     height: auto;
+    position: relative;
   }
   @media (min-width: $screen-lg-min) {
     img {

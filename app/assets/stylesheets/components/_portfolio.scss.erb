@@ -1,0 +1,31 @@
+#portfolio {
+  .poligon {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background: transparent;
+    transition: background 0.2s ease;
+    box-sizing: border-box;
+    -webkit-clip-path: url(#clipper);
+    -moz-clip-path: url(#clipper);
+    clip-path: url(#clipper);
+  }
+  img {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    -webkit-clip-path: url(#clipper);
+    -moz-clip-path: url(#clipper);
+    clip-path: url(#clipper);
+  }
+  a {
+    &:focus, &:hover {
+      .poligon {
+        background: #2e323b;
+      }
+    }
+  }
+}
