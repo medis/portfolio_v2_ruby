@@ -20,12 +20,31 @@
     -webkit-clip-path: url(#clipper);
     -moz-clip-path: url(#clipper);
     clip-path: url(#clipper);
+    z-index: 4;
+  }
+  .hover_bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(<%= asset_path 'banner_bg.png' %>);
+    z-index: 5;
   }
   a {
     &:focus, &:hover {
+      outline: none;
       .poligon {
         background: #2e323b;
       }
+      .hover_bg {
+        display: block;
+      }
     }
+  }
+  .title {
+    color: #FFF;
+    text-align: center;
   }
 }
