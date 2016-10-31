@@ -16,3 +16,4 @@
 //= require turbolinks
 //= require jquery.easing/jquery.easing.1.3
 //= require_tree .
+//= require vue

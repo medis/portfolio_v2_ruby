@@ -15,29 +15,37 @@
     </div>
     <div class="portfolio-wrapper">
       <div class="col-md-4 item">
-        <a href="#" role="button">
+        <a href="#" role="button" v-on:click.prevent.stop="portfolioClick">
           <div class="poligon">
             <div class="hover_bg">
               <div class="vertical-center">
                 <div class="title">WEA</div>
+                <div class="spec">Drupal 8, PHP 7, Windows</div>
+                <div class="magnifying-glass"><span><%= image_tag('magnifying_glass.png') %></span></div>
               </div>
             </div>
-            <%= image_tag('portfolio/wea.jpg') %>
+            <%= image_tag('portfolio/wea.jpg', :class => 'portfolio-image') %>
           </div>
         </a>
+        <div class="hidden description">
+          <h3>WEA</h3>
+          <p>This is description</p>
+        </div>
       </div>
-      <div class="col-md-4 item">
-        <a href="#" role="button">
+      <div class="visible-xs" v-html="row0_description"></div>
+      <div class="col-xs-12 col-md-4 item">
+        <a href="#" role="button" v-on:click.prevent.stop="portfolioClick">
           <div class="poligon">
             <div class="hover_bg">
               <div class="vertical-center">
                 <div class="title">RNIB</div>
               </div>
             </div>
-            <%= image_tag('portfolio/rnib.jpg') %>
+            <%= image_tag('portfolio/rnib.jpg', :class => 'portfolio-image') %>
           </div>
         </a>
       </div>
+      <div class="col-xs-12 visible-xs visible-sm" v-html="row0_description"></div>
       <div class="col-md-4 item">
         <a href="#" role="button">
           <div class="poligon">
@@ -46,10 +54,11 @@
                 <div class="title">Youtalk-insurance</div>
               </div>
             </div>
-            <%= image_tag('portfolio/youtalk.jpg') %>
+            <%= image_tag('portfolio/youtalk.jpg', :class => 'portfolio-image') %>
           </div>
         </a>
       </div>
+      <div class="col-xs-12" v-html="row0_description"></div>
       <div class="col-md-4 item">
         <a href="#" role="button">
           <div class="poligon">
@@ -58,7 +67,7 @@
                 <div class="title">Brockmans Gin</div>
               </div>
             </div>
-            <%= image_tag('portfolio/brockmans.jpg') %>
+            <%= image_tag('portfolio/brockmans.jpg', :class => 'portfolio-image') %>
           </div>
         </a>
       </div>
@@ -70,7 +79,7 @@
                 <div class="title">Condor Gold</div>
               </div>
             </div>
-            <%= image_tag('portfolio/condor.jpg') %>
+            <%= image_tag('portfolio/condor.jpg', :class => 'portfolio-image') %>
           </div>
         </a>
       </div>
@@ -82,7 +91,7 @@
                 <div class="title">Medava</div>
               </div>
             </div>
-            <%= image_tag('portfolio/medava.jpg') %>
+            <%= image_tag('portfolio/medava.jpg', :class => 'portfolio-image') %>
           </div>
         </a>
       </div>
