@@ -6,7 +6,7 @@ $(function() {
   var portfolio = new Vue({
     el: '#portfolio',
     data: {
-      row0_description: '',
+      description: '',
     },
     methods: {
       portfolioClick: function(e) {
@@ -14,8 +14,9 @@ $(function() {
         $elem = $(e.currentTarget);
         index = this.getIndex($elem);
         row = this.getRow(index);
-        selector = 'row' + row + '_description';
-        this[selector] = this.getDescription($elem);
+        this.hideDescription();
+        this.showDescription($elem, row, index);
+        this.description = this.getDescription($elem);
       },
 
       // Return clicked portfolio row index in DOM.
@@ -39,6 +40,29 @@ $(function() {
         }
         return Math.floor(index / columns);
       },
+
+      // Make description div visible.
+      showDescription: function($elem, row, index) {
+        var $small, $medium, $large,
+            medium_offset = 0;
+        if (row * 3 + 1 < index) {
+          medium_offset = 2;
+        }
+        // Reserve dom elements.
+        $small = $elem.parent().next('.dynamic-description');
+        $medium = $('#portfolio .dynamic-description').eq(row * 3 + 1 + medium_offset);
+        $large = $('#portfolio .dynamic-description').eq(row * 3 + 2);
+
+        // Show small, medium and large descriptions related to current row.
+        $small.addClass('visible-xs-block').removeClass('hidden');
+        $medium.addClass('visible-sm-block').removeClass('hidden');
+        $large.addClass('visible-md-block visible-lg-block').removeClass('hidden');
+      },
+
+      // Hide visible description divs.
+      hideDescription: function() {
+        $('#portfolio .dynamic-description:not(.hidden)').removeClass().addClass('dynamic-description hidden');
+      }
     }
   });
 });

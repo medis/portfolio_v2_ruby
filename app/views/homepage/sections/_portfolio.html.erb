@@ -14,87 +14,29 @@
       <div class="border right-border"></div>
     </div>
     <div class="portfolio-wrapper">
-      <div class="col-md-4 item">
-        <a href="#" role="button" v-on:click.prevent.stop="portfolioClick">
-          <div class="poligon">
-            <div class="hover_bg">
-              <div class="vertical-center">
-                <div class="title">WEA</div>
-                <div class="spec">Drupal 8, PHP 7, Windows</div>
-                <div class="magnifying-glass"><span><%= image_tag('magnifying_glass.png') %></span></div>
+
+      <% portfolios.each do |portfolio| %>
+        <div class="col-sm-6 col-md-4 item">
+          <a href="#" role="button" v-on:click.prevent="portfolioClick">
+            <div class="poligon">
+              <div class="hover_bg">
+                <div class="vertical-center">
+                  <div class="title"><%= portfolio[:title] %></div>
+                  <div class="spec"><%= portfolio[:spec] %></div>
+                  <div class="magnifying-glass"><span><%= image_tag('magnifying_glass.png') %></span></div>
+                </div>
               </div>
+              <%= image_tag(portfolio[:image], :class => 'portfolio-image') %>
             </div>
-            <%= image_tag('portfolio/wea.jpg', :class => 'portfolio-image') %>
+          </a>
+          <div class="hidden description">
+            <h3><%= portfolio[:title] %></h3>
+            <p><%= portfolio[:description] %></p>
           </div>
-        </a>
-        <div class="hidden description">
-          <h3>WEA</h3>
-          <p>This is description</p>
         </div>
-      </div>
-      <div class="visible-xs" v-html="row0_description"></div>
-      <div class="col-xs-12 col-md-4 item">
-        <a href="#" role="button" v-on:click.prevent.stop="portfolioClick">
-          <div class="poligon">
-            <div class="hover_bg">
-              <div class="vertical-center">
-                <div class="title">RNIB</div>
-              </div>
-            </div>
-            <%= image_tag('portfolio/rnib.jpg', :class => 'portfolio-image') %>
-          </div>
-        </a>
-      </div>
-      <div class="col-xs-12 visible-xs visible-sm" v-html="row0_description"></div>
-      <div class="col-md-4 item">
-        <a href="#" role="button">
-          <div class="poligon">
-            <div class="hover_bg">
-              <div class="vertical-center">
-                <div class="title">Youtalk-insurance</div>
-              </div>
-            </div>
-            <%= image_tag('portfolio/youtalk.jpg', :class => 'portfolio-image') %>
-          </div>
-        </a>
-      </div>
-      <div class="col-xs-12" v-html="row0_description"></div>
-      <div class="col-md-4 item">
-        <a href="#" role="button">
-          <div class="poligon">
-            <div class="hover_bg">
-              <div class="vertical-center">
-                <div class="title">Brockmans Gin</div>
-              </div>
-            </div>
-            <%= image_tag('portfolio/brockmans.jpg', :class => 'portfolio-image') %>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4 item">
-        <a href="#" role="button">
-          <div class="poligon">
-            <div class="hover_bg">
-              <div class="vertical-center">
-                <div class="title">Condor Gold</div>
-              </div>
-            </div>
-            <%= image_tag('portfolio/condor.jpg', :class => 'portfolio-image') %>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4 item">
-        <a href="#" role="button">
-          <div class="poligon">
-            <div class="hover_bg">
-              <div class="vertical-center">
-                <div class="title">Medava</div>
-              </div>
-            </div>
-            <%= image_tag('portfolio/medava.jpg', :class => 'portfolio-image') %>
-          </div>
-        </a>
-      </div>
+        <div class="dynamic-description hidden" v-html="description"></div>
+      <% end %>
+
     </div>
   </div>
 </div>
