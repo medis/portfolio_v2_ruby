@@ -52,8 +52,14 @@
   }
 }
 
-#about p {
-  text-align: justify;
+#about {
+  overflow: hidden;
+  background-image: url(<%= asset_path('about_section_bg.png') %>);
+  background-repeat: no-repeat;
+  background-position: 103% 0;
+  p {
+    text-align: justify;
+  }
 }
 
 #area-of-expertise {
