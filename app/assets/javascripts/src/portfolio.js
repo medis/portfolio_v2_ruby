@@ -43,14 +43,11 @@ $(function() {
 
       // Make description div visible.
       showDescription: function($elem, row, index) {
-        var $small, $medium, $large,
-            medium_offset = 0;
-        if (row * 3 + 1 < index) {
-          medium_offset = 2;
-        }
+        var $small, $medium, $large;
+        
         // Reserve dom elements.
         $small = $elem.parent().next('.dynamic-description');
-        $medium = $('#portfolio .dynamic-description').eq(row * 3 + 1 + medium_offset);
+        $medium = $('#portfolio .dynamic-description').eq(row * 2 + 1);
         $large = $('#portfolio .dynamic-description').eq(row * 3 + 2);
 
         // Show small, medium and large descriptions related to current row.

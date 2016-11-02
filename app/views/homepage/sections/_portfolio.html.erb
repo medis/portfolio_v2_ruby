@@ -32,6 +32,21 @@
           <div class="hidden description">
             <h3><%= portfolio[:title] %></h3>
             <p><%= portfolio[:description] %></p>
+            <% if portfolio[:technology].any? %>
+              <div class="technology-list-wrapper">
+                <h4>TECHNOLOGY USED</h4>
+                <ul class="technology-list">
+                  <% portfolio[:technology].each do |technology| %>
+                    <li><%= image_tag("technologies/#{technology}.png", title: technology) %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <% unless portfolio[:website].empty? %>
+              <div class="website-link-wrapper">
+                <%= link_to(raw('<i class="fa fa-link" aria-hidden="true"></i> <span>View website</span>'), portfolio[:website], {target: '_blank'}) %>
+              </div>
+            <% end %>
           </div>
         </div>
         <div class="dynamic-description hidden" v-html="description"></div>

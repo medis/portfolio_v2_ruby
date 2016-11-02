@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'unicorn'
-
+gem "font-awesome-rails"
 gem 'vuejs-rails'
 
 # Use jquery as the JavaScript library
