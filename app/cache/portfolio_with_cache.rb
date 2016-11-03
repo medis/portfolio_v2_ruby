@@ -5,7 +5,7 @@ class PortfolioWithCache
   end
 
   def build
-    Rails.cache.fetch('portfolios', expires_in: 5.seconds) do
+    Rails.cache.fetch('portfolios', expires_in: 12.hours) do
       portfolio_service.build
     end
   end
