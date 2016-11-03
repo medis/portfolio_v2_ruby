@@ -8,7 +8,6 @@ class PortfolioBuilder
   private
 
   def generate
-    @portfolios = []
     path = File.join(Rails.root, 'app', 'data', 'portfolios.json')
     file = File.read(path)
     hash = JSON.parse(file)

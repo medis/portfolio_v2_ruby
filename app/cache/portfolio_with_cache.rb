@@ -1,6 +1,6 @@
 class PortfolioWithCache
 
-  def initialize(portfolio_service)
+  def initialize(portfolio_service = PortfolioBuilder.new)
     @portfolio_service = portfolio_service
   end
 
