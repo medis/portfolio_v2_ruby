@@ -15,7 +15,7 @@ $(function() {
         index = this.getIndex($elem);
         row = this.getRow(index);
         this.hideDescription();
-        this.showDescription($elem, row, index);
+        this.showDescription($elem, row);
         this.description = this.getDescription($elem);
       },
 
@@ -42,9 +42,9 @@ $(function() {
       },
 
       // Make description div visible.
-      showDescription: function($elem, row, index) {
+      showDescription: function($elem, row) {
         var $small, $medium, $large;
-        
+
         // Reserve dom elements.
         $small = $elem.parent().next('.dynamic-description');
         $medium = $('#portfolio .dynamic-description').eq(row * 2 + 1);
