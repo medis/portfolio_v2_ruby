@@ -1,6 +1,6 @@
 class HomepageController < ApplicationController
   def index
-    portfolios = PortfolioWithCache.new.build
+    portfolios = PortfolioWithCache.build
 
     render 'homepage/index', :locals => {:portfolios => portfolios}
   end
