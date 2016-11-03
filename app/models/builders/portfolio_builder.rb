@@ -1,13 +1,4 @@
 class PortfolioBuilder
-  def initialize
-    #if (@portfolios = Rails.cache.fetch(key)).nil?
-      #@portfolios = []
-      #self.generate
-    #end
-
-
-  end
-
   def build
     @portfolios = []
     generate
