@@ -75,6 +75,11 @@ nav li.link a {
 		}
 	}
 }
+nav li.logo a {
+  &:hover, &:focus, &.active {
+    background: transparent;
+  }
+}
 
 nav li .icon {
 	padding-bottom: 15px;
@@ -107,9 +112,13 @@ nav li .icon {
       width: 60%;
 		}
 		ul li {
+      padding: .8em;
       img {
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
       }
 			&.logo img {
 				display: none;
