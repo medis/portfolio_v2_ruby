@@ -1,0 +1,10 @@
+{
+	"PHP": {
+		"Drupal 7": 90,
+		"Drupal 8": 70,
+		"Laravel": 50
+	},
+	"Ruby": {
+		"Ruby on Rails": 20
+	}
+}

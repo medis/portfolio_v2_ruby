@@ -1,0 +1,27 @@
+<div id="area-of-expertise">
+  <div id="trigger-area-of-expertise"></div>
+  <div class="container">
+    <div class="section-title">
+      <div class="border left-border"></div>
+      <h2>AREAS OF EXPERTISE</h2>
+      <div class="border right-border"></div>
+    </div>
+
+    <% skills.each do |group, skill| %>
+      <div class="<%= group %>">
+        <div class="title"><%= group %></div>
+        
+        <% skill.each do |object| %>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="<%= object.percent %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= object.percent %>%;">
+              <div class="left"><%= object.title %></div>
+              <div class="right"><%= object.percent %>%</div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+    <% end %>
+
+  </div>
+</div>
