@@ -1,9 +1,9 @@
 (function($) {
   $(window).scroll(function() {
     if ($(document).scrollTop() > 0) {
-      $('nav').addClass('shrink');
+      //$('nav').addClass('shrink');
     } else {
-      $('nav').removeClass('shrink');
+      //$('nav').removeClass('shrink');
     }
   });
 })(jQuery);

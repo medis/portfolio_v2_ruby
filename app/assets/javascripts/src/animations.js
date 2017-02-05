@@ -16,9 +16,22 @@ $(function() {
 		.addTo(controller);
   }
 
+  function animate_knowledge_opacity() {
+    var controller = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+			triggerElement: 'body',
+      duration: 700,
+      offset: 260
+		})
+		.setTween('.animate-bg', {opacity: '1'})
+		.addTo(controller);
+  }
+
   $(window).load(function() {
     animate_border('#trigger-biography', '#about .section-title .border');
     animate_border('#trigger-area-of-expertise', '#area-of-expertise .section-title .border');
     animate_border('#trigger-portfolio', '#portfolio .section-title .border');
+    animate_knowledge_opacity();
   });
 });
