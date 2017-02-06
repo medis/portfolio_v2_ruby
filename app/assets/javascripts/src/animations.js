@@ -26,6 +26,22 @@ $(function() {
 		})
 		.setTween('.animate-bg', {opacity: '1'})
 		.addTo(controller);
+
+    new ScrollMagic.Scene({
+			triggerElement: 'body',
+      duration: 700,
+      offset: $(window).height() / 2 + 100,
+		})
+		.setTween('.icon.white', {opacity: '1'})
+		.addTo(controller);
+
+    new ScrollMagic.Scene({
+			triggerElement: 'body',
+      duration: 500,
+      offset: $(window).height() / 2,
+		})
+		.setTween('ul.nav', {height: 132})
+		.addTo(controller);
   }
 
   $(window).load(function() {

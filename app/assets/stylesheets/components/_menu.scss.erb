@@ -1,4 +1,7 @@
 @import "susy";
+.navbar {
+	padding: 10px 0;
+}
 #logo {
 	img {
 		width: 100%;
@@ -34,14 +37,14 @@ nav {
 		list-style: none;
     height: 271px;
     width: 100%;
+		overflow: hidden;
 		li {
 			width: 16.66%;
-      height: 100%;
+      height: 217px;
 			display: block;
 			float: left;
 			a {
 				display: block;
-        height: 100%;
 				padding: 2em;
 				text-decoration: none;
 				transition: background-color 0.3s ease;
@@ -59,7 +62,7 @@ nav {
 
 nav li.link a {
 	&:hover, &:focus, &.active {
-		background-color: #2e323b;
+		background-color: transparent;
 
 		.title, .description {
 			color: #FFF;
@@ -85,9 +88,15 @@ nav li.logo a {
 nav li .icon {
 	padding-bottom: 15px;
   text-align: center;
-	&.hover,
-	&.white {
+	&.hover {
 		display: none;
+	}
+	&.white {
+		position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    opacity: 0;
 	}
 }
 
@@ -146,4 +155,11 @@ nav li .icon {
 			}
 		}
 	}
+}
+.menu-bg {
+	height: 152px;
+	position: fixed;
+	width: 100%;
+	background: #000;
+	z-index: 3;
 }
