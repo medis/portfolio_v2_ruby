@@ -32,7 +32,15 @@ $(function() {
       duration: 700,
       offset: $(window).height() / 2 + 100,
 		})
-		.setTween('.icon.white', {opacity: '1'})
+		.setTween('.icon.white, #logo img.white', {opacity: '1'})
+		.addTo(controller);
+
+    new ScrollMagic.Scene({
+			triggerElement: 'body',
+      duration: 700,
+      offset: $(window).height() / 2 + 100,
+		})
+		.setTween('ul.nav a .title', {color: '#FFFFFF'})
 		.addTo(controller);
 
     new ScrollMagic.Scene({

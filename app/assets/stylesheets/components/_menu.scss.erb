@@ -3,24 +3,50 @@
 	padding: 10px 0;
 }
 #logo {
+	padding-top: 10px;
+	position: relative;
 	img {
 		width: 100%;
 		height: auto;
 		max-width: 80px;
 		&.white {
-			display: none;
+			position: absolute;
+			top: 10px;
+			left: 15px;
+			opacity: 0;
 		}
 	}
 }
 nav {
   .title {
-		font-size: 1.35em;
+		font-size: 1.3em;
 		text-align: center;
 		margin: 0;
 		border-bottom: 1px solid #21211f;
 		padding-bottom: 5px;
 		color: #2b323c;
     font-family: 'NotoSans-Bold';
+		.animate {
+			opacity: 0;
+			-webkit-transition: opacity 0.3s ease-in-out;
+			-moz-transition: opacity 0.3s ease-in-out;
+			transition: opacity 0.3s ease-in-out;
+			&.left {
+				padding-right: 4px;
+				transform: translate(-10px, 0);
+    		display: inline-block;
+			}
+			&.right {
+				padding-left: 4px;
+				transform: translate(10px, 0);
+    		display: inline-block;
+			}
+			&.left, &.right {
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
+			}
+		}
 	}
 	div.description {
 		margin: 0;
@@ -75,6 +101,13 @@ nav li.link a {
 			display: none;
 			&.hover {
 				display: block;
+			}
+		}
+
+		.animate {
+			opacity: 1;
+			&.left, &.right {
+				transform: translate(0, 0);
 			}
 		}
 	}
@@ -160,6 +193,6 @@ nav li .icon {
 	height: 152px;
 	position: fixed;
 	width: 100%;
-	background: #000;
+	background: #2e323b;
 	z-index: 3;
 }
