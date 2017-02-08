@@ -22,7 +22,7 @@ $(function() {
     new ScrollMagic.Scene({
 			triggerElement: 'body',
       duration: 700,
-      offset: 260
+      offset: $(window).height() / 2
 		})
 		.setTween('.animate-bg', {opacity: '1'})
 		.addTo(controller);

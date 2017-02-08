@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.7.2'
 
 set :application, 'portfolio'
 set :repo_url, 'git@github.com:medis/portfolio_v2_ruby.git'
