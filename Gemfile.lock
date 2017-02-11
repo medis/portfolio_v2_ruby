@@ -81,6 +81,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
+    dotenv (2.2.0)
+    dotenv-rails (2.2.0)
+      dotenv (= 2.2.0)
+      railties (>= 3.2, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.17)
@@ -89,6 +93,8 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.0)
+    invisible_captcha (0.9.2)
+      rails (>= 3.2.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -212,7 +218,9 @@ DEPENDENCIES
   capistrano-rbenv-vars
   capistrano3-unicorn
   coffee-rails (~> 4.2)
+  dotenv-rails
   font-awesome-rails
+  invisible_captcha
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
