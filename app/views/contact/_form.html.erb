@@ -1,7 +1,0 @@
-<%= form_tag do %>
-  <%= invisible_captcha %>
-  <%= text_field(:person, :name, placeholder: "Name", :required => true) %>
-  <%= email_field(:person, :email, placeholder: "Email", :required => true) %>
-  <%= text_area(:person, :message, placeholder: "Hi, nice site", :required => true) %>
-  <%= submit_tag("Send") %>
-<% end %>

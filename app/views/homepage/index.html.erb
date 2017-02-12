@@ -15,9 +15,10 @@
   <div class="animate-bg"></div>
 </div>
 
-<div class="section">
+<div id="about" class="section">
   <%= render "homepage/sections/about" %>
-
+</div>
+<div id="expertise" class="section">
   <%= render "homepage/sections/area_of_expertise", skills: skills %>
 </div>
 <div class="design-image">
@@ -34,5 +35,5 @@
     <!-- Your content goes here -->
 </div>
 <div id="contact" class="section">
-    <%= render "contact/form" %>
+    <%= render "homepage/sections/contact" %>
 </div>

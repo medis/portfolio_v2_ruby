@@ -1,0 +1,32 @@
+#contact {
+  input, textarea {
+    width: 100%;
+    padding: 10px 15px 10px 43px;
+    border-radius: 10px;
+    border: 2px solid #2e323b;
+    outline: none;
+  }
+  input[type="submit"] {
+    width: auto;
+    padding-left: 15px;
+    float: right;
+    &:focus, &:hover {
+      background: #2e323b;
+      color: #FFF;
+    }
+  }
+  textarea {
+    height: 108px;
+  }
+  .form-item {
+    margin: 20px 0;
+    position: relative;
+    i {
+      position: absolute;
+      left: 10px;
+      top: 9px;
+      font-size: 25px;
+      color: #cdcdcd;
+    }
+  }
+}

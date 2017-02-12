@@ -1,0 +1,30 @@
+<div id="contact">
+  <div id="trigger-contact"></div>
+  <div class="container">
+    <div class="section-title">
+      <div class="border left-border"></div>
+      <h2>CONTACT ME</h2>
+      <div class="border right-border"></div>
+    </div>
+    <%= form_tag do %>
+      <%= invisible_captcha %>
+      <div class="col-md-6">
+        <div class="form-item name">
+          <i class="fa fa-user-o" aria-hidden="true"></i>
+          <%= text_field(:person, :name, placeholder: "Name", :required => true) %>
+        </div>
+        <div class="form-item email">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <%= email_field(:person, :email, placeholder: "Email", :required => true) %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-item message">
+          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+          <%= text_area(:person, :message, placeholder: "Your message ...", :required => true) %>
+        </div>
+        <%= submit_tag("Send") %>
+      </div>
+    <% end %>
+  </div>
+</div>
