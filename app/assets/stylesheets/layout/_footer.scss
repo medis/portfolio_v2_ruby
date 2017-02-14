@@ -1,0 +1,38 @@
+#footer {
+  background: #2e323b;
+  color: #FFF;
+  padding: 30px 0;
+  a {
+    color: #FFF;
+  }
+  .logo img {
+    max-width: 150px;
+    height: auto;
+  }
+  ul.social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding-bottom: 10px;
+    }
+    a {
+      vertical-align: bottom;
+      i {
+        font-size: 30px;
+        padding-right: 10px;
+      }
+      &:hover, &:focus {
+        i.fa-drupal {
+          color: #0077C0;
+        }
+        i.fa-linkedin {
+          color: #4875B4;
+        }
+        i.fa-twitter {
+          color: #33CCFF;
+        }
+      }
+    }
+  }
+}
