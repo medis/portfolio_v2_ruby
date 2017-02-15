@@ -1,0 +1,22 @@
+@mixin active_menu {
+  background-color: transparent;
+
+  .title, .description {
+    -webkit-animation: slideInUp .5s;
+    animation: slideInUp .5s;
+  }
+
+  .icon {
+    display: none;
+    &.hover {
+      display: block;
+    }
+  }
+
+  .animate {
+    opacity: 1;
+    &.left, &.right {
+      transform: translate(0, 0);
+    }
+  }
+}

@@ -87,28 +87,12 @@ nav {
 }
 
 nav li.link a {
-	&:hover, &:focus, &.active {
-		background-color: transparent;
-
-		.title, .description {
-			-webkit-animation: slideInUp .5s;
-	    animation: slideInUp .5s;
-		}
-
-		.icon {
-			display: none;
-			&.hover {
-				display: block;
-			}
-		}
-
-		.animate {
-			opacity: 1;
-			&.left, &.right {
-				transform: translate(0, 0);
-			}
-		}
+	&:hover, &:focus {
+		@include active_menu;
 	}
+}
+nav li.link.active a {
+	@include active_menu;
 }
 nav li.logo a {
   &:hover, &:focus, &.active {
