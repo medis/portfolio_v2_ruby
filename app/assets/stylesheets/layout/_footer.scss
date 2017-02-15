@@ -8,6 +8,7 @@
   .logo img {
     max-width: 150px;
     height: auto;
+    float: right;
   }
   ul.social {
     list-style: none;
@@ -21,6 +22,7 @@
       i {
         font-size: 30px;
         padding-right: 10px;
+        transition: color linear .1s;
       }
       &:hover, &:focus {
         i.fa-drupal {
@@ -31,6 +33,9 @@
         }
         i.fa-twitter {
           color: #33CCFF;
+        }
+        i.fa-github {
+          color: #767676;
         }
       }
     }
