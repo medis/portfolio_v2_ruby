@@ -14,16 +14,21 @@ class SkillsBuilder
     hash.each { |key, value| add(key, value) }
   end
 
-  def add(group, skills)
-    @skills_array = []
-    
-    skills.each { |title, percent|
-      @skills_array << Skill.new(
-        title: title,
-        percent: percent,
-      )
+  def add(group, tech)
+    tech_hash = {}
+    tech.each { |tech_title, skills|
+      skills_array = []
+      
+      skills.each { |title, percent|
+        skills_array << Skill.new(
+          title: title,
+          percent: percent,
+        )
+      }
+
+      tech_hash.store(tech_title, skills_array)
     }
 
-    @skills.store(group, @skills_array)
+    @skills.store(group, tech_hash)
   end
 end

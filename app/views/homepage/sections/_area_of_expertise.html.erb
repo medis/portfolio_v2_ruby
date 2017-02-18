@@ -7,19 +7,21 @@
       <div class="border right-border"></div>
     </div>
 
-    <% skills.each do |group, skill| %>
-      <div class="<%= group %>">
-        <div class="title"><%= group %></div>
-        
-        <% skill.each do |object| %>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="<%= object.percent %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= object.percent %>%;">
-              <div class="left"><%= object.title %></div>
-              <div class="right"><%= object.percent %>%</div>
-            </div>
-          </div>
-        <% end %>
+    <% skills.each do |group, tech| %>
+      <div class="<%= group %> col-md-4">
+        <h3><%= group %></h3>
+        <% tech.each do |tech_title, skill| %>
+          <div class="title"><%= tech_title %></div>
 
+          <% skill.each do |object| %>
+            <div class="progress">
+              <div class="progress-bar hidden-bar" role="progressbar" aria-valuenow="<%= object.percent %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= object.percent %>%; transition-delay: <%= rand(0.0..1.0).round(1) %>s">
+                <div class="left"><%= object.title %></div>
+                <div class="right"><%= object.percent %>%</div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     <% end %>
 

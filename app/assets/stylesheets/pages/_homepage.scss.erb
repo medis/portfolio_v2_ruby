@@ -8,7 +8,7 @@
   height: 700px;
   background: #2e323b;
   position: relative;
-  z-index: 6;
+  z-index: 12;
   .fade-bg {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+0,ffffff+100&1+0,0+100 */
     background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
@@ -102,29 +102,19 @@
     background-color: #e75b06;
     height: 25px;
     border-radius: 12px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
   .progress-bar {
     text-align: left;
-    padding: 0 0.5em 0 2em;
+    padding: 0 1em;
     background-color: #2e323b;
     line-height: 25px;
     position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      margin-right: 12px;
-      width: 19px;
-      padding-top: 46px;
-      transform: rotate(45deg);
-      box-shadow: 5px -5px 0 3px #2e323b;
-      z-index: 1;
-      background: #2e323b;
-      top: 0;
-    }
+    border-radius: 12px;
+    
     > div {
-      z-index: 2;
-      position: relative;
+      z-index: 10;
     }
   }
   .left {
