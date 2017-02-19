@@ -53,10 +53,10 @@ $(function() {
   }
 
   $(window).load(function() {
-    /*animate_border('#trigger-biography', '#about .section-title .border');
+    animate_border('#trigger-biography', '#about .section-title .border');
     animate_border('#trigger-area-of-expertise', '#area-of-expertise .section-title .border');
     animate_border('#trigger-portfolio', '#portfolio .section-title .border');
-    animate_border('#trigger-contact', '#contact .section-title .border');*/
+    animate_border('#trigger-contact', '#contact .section-title .border');
     animate_knowledge_opacity();
     animate_skills();
   });
