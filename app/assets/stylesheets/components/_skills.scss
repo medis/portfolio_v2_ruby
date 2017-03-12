@@ -1,4 +1,5 @@
 #area-of-expertise {
+  text-align: center;
   h3 {
     transform: translate(0, 10px);
     opacity: 0;
@@ -6,8 +7,22 @@
   .progress-bar {
       -webkit-box-shadow: none;
      box-shadow: none; 
-     &.hidden-bar {
-       width: 0% !important;
-     }
+     
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li.skill-title {
+      padding-bottom: 10px;
+      font-size: 15px;
+      opacity: 1;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
+      &.hidden-skill {
+        opacity: 0;
+      }
+    }
   }
 }

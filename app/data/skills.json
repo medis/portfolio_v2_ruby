@@ -1,39 +1,40 @@
 {
 	"Backend": {
-		"PHP": {
-			"Drupal 7": 90,
-			"Drupal 8": 70,
-			"Laravel": 50
-		},
-		"Ruby": {
-			"Ruby on Rails": 40
-		}
+		"PHP": [
+			"Drupal 7",
+			"Drupal 8",
+			"Laravel"
+		],
+		"Ruby": [
+			"Ruby on Rails"
+		]
 	},
 	"Frontend": {
-		"Javascript": {
-			"React": 30,
-			"Vue": 40,
-			"D3": 60,
-			"Angular": 15,
-			"jQuery": 85
-		},
-		"SASS": {
-			"Bootstrap": 70,
-			"Susy": 90
-		}
+		"Javascript": [
+			"ReactJS",
+			"VueJS",
+			"D3js",
+			"Angular",
+			"jQuery"
+		],
+		"CSS/SASS": [
+			"Bootstrap",
+			"Zurb Foundation",
+			"Susy"
+		]
 	},
 	"Devops": {
-		"Server": {
-			"NGINX": 70,
-			"Apache": 50
-		},
-		"Multi-server": {
-			"GlusterFS": 40,
-			"Galera": 35
-		},
-		"Other": {
-			"Jenkins": 40,
-			"Docker": 30
-		}
+		"Server": [
+			"NGINX",
+			"Apache"
+		],
+		"Multi-server": [
+			"GlusterFS",
+			"Galera"
+		],
+		"Other": [
+			"Jenkins",
+			"Docker"
+		]
 	}
 }

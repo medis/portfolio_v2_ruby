@@ -19,10 +19,9 @@ class SkillsBuilder
     tech.each { |tech_title, skills|
       skills_array = []
       
-      skills.each { |title, percent|
+      skills.each { |title|
         skills_array << Skill.new(
-          title: title,
-          percent: percent,
+          title: title
         )
       }
 

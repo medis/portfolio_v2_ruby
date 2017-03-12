@@ -1,7 +1,7 @@
 class Skill
   include ActiveModel::Model
 
-  attr_accessor :title, :percent
+  attr_accessor :title
 
-  validates :title, :percent, :presence => true
+  validates :title, :presence => true
 end

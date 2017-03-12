@@ -13,7 +13,7 @@ animate_skills = function() {
     offset: 1300,
   })
   .on("enter", function (e) {
-    $('#area-of-expertise .progress-bar').removeClass('hidden-bar');
+    $('#area-of-expertise .skill-title').removeClass('hidden-skill');
   })
   .addTo(controller);
   
