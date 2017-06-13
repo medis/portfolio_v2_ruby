@@ -2,14 +2,6 @@
   <div id="portfolio">
     <div id="trigger-portfolio"></div>
     <div class="container">
-      <svg width="0" height="0">
-        <defs>
-          <clipPath id="clipper" clipPathUnits="objectBoundingBox">
-            <polygon points=".9232051 .40, .9379385 .431596, .9469616 .4652704, .95 .50, .9469616 .5347296, .9379385 .568404, .9232051 .60, .7982051 .8165064, .7782089 .8450639, .7535575 .8697152, .725 .8897114, .693404 .9044449, .6597296 .9134679, .625 .9165064, .375 .9165064, .3402704 .9134679, .306596 .9044449, .275 .8897114, .2464425 .8697152, .2217911 .8450639, .2017949 .8165064, .0767949 .60, .0620615 .568404, .0530384 .5347296, .05 .50, .0530384 .4652704, .0620615 .431596, .0767949 .40, .2017949 .1834936, .2217911 .1549361, .2464425 .1302848, .275 .1102886, .306596 .0955551, .3402704 .0865321, .375 .0834936, .625 .0834936, .6597296 .0865321, .693404 .0955551, .725 .1102886, .7535575 .1302848, .7782089 .1549361, .7982051 .1834936"
-            />
-          </clipPath>
-        </defs>
-      </svg>
       <div class="section-title">
         <div class="border left-border"></div>
         <h2>PORTFOLIO</h2>
@@ -18,7 +10,7 @@
       <div class="portfolio-wrapper">
 
         <% portfolios.each do |portfolio| %>
-          <div class="col-sm-6 col-md-4 item">
+          <div class="col-xs-6 col-sm-4 col-md-3 item">
             <a href="#" role="button" v-on:click.prevent="portfolioClick">
               <div class="poligon">
                 <div class="hover_bg">

@@ -3,11 +3,13 @@
  * Open description when clicked on item.
  */
 $(function() {
-  var portfolio = new Vue({
+  new Vue({
     el: '#portfolio',
+
     data: {
       description: '',
     },
+
     methods: {
       portfolioClick: function(e) {
         var index, row, selector, $elem;
@@ -32,11 +34,11 @@ $(function() {
 
       // Return row number to which description needs to be put.
       getRow: function(index) {
-        var columns = 1;
+        var columns = 2;
         if ($(window).width() >= 992) {
-          columns = 3;
+          columns = 4;
         } else if ($(window).width() >= 768) {
-          columns = 2;
+          columns = 3;
         }
         return Math.floor(index / columns);
       },
@@ -47,8 +49,8 @@ $(function() {
 
         // Reserve dom elements.
         $small = $elem.parent().next('.dynamic-description');
-        $medium = $('#portfolio .dynamic-description').eq(row * 2 + 1);
-        $large = $('#portfolio .dynamic-description').eq(row * 3 + 2);
+        $medium = $('#portfolio .dynamic-description').eq(row * 3 + 1);
+        $large = $('#portfolio .dynamic-description').eq(row * 4 + 2);
 
         // Show small, medium and large descriptions related to current row.
         $small.addClass('visible-xs-block').removeClass('hidden');

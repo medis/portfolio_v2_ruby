@@ -3,6 +3,7 @@
   background-image: url(<%= asset_path('portfolio_section_bg.png') %>);
   background-repeat: no-repeat;
   background-position: 111% 0;
+  margin-top: 100px;
   .poligon {
     display: inline-block;
     position: relative;
@@ -11,9 +12,6 @@
     background: transparent;
     transition: background 0.2s ease;
     box-sizing: border-box;
-    -webkit-clip-path: url(#clipper);
-    -moz-clip-path: url(#clipper);
-    clip-path: url(#clipper);
   }
   img.portfolio-image {
     position: absolute;
@@ -21,9 +19,6 @@
     left: 2%;
     width: 96%;
     height: 96%;
-    -webkit-clip-path: url(#clipper);
-    -moz-clip-path: url(#clipper);
-    clip-path: url(#clipper);
     z-index: 4;
   }
   .hover_bg {

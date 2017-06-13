@@ -10,13 +10,14 @@
     width: auto;
     padding-left: 15px;
     float: right;
+    width: 200px;
     &:focus, &:hover {
       background: #2e323b;
       color: #FFF;
     }
   }
   textarea {
-    height: 108px;
+    height: 208px;
   }
   .form-item {
     margin: 20px 0;
