@@ -9,7 +9,9 @@
   .icon {
     display: none;
     &.hover {
-      display: block;
+      @include breakpoint($small) {
+        display: block;
+      }
     }
   }
 

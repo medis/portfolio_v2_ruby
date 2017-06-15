@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.7.2'
+lock '3.8.1'
 
 set :application, 'portfolio'
 set :repo_url, 'git@github.com:medis/portfolio_v2_ruby.git'
@@ -25,7 +25,7 @@ Rake::Task["deploy:compile_assets"].clear
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:restart'
+    invoke 'unicorn:reload'
   end
 
   desc 'Compile assets'
@@ -102,9 +102,10 @@ end
 
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/secrets.yml'
 
 # Default value for linked_dirs is []
-# append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
