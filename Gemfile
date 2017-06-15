@@ -13,7 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem "breakpoint"
+gem 'susy'
 gem 'unicorn'
 gem "font-awesome-rails"
 gem 'vuejs-rails'
@@ -50,8 +51,6 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-rbenv-vars'
   gem 'capistrano3-unicorn'
-  gem "breakpoint"
-  gem 'susy'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
