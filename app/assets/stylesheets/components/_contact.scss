@@ -9,11 +9,14 @@
   input[type="submit"] {
     width: auto;
     padding-left: 15px;
-    float: right;
-    width: 200px;
+    width: 100%;
     &:focus, &:hover {
       background: #2e323b;
       color: #FFF;
+    }
+    @include breakpoint($medium) {
+      float: right;
+      width: 200px;
     }
   }
   textarea {
