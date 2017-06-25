@@ -102,7 +102,7 @@ end
 
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
-append :linked_files, 'config/secrets.yml'
+append :linked_files, 'config/secrets.yml', '.rbenv-vars'
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
