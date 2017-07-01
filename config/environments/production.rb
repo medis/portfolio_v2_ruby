@@ -55,7 +55,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_options = {from: 'hello@audrius.io'}
+  config.action_mailer.default_options = {from: 'hello@audrius.io', to: ENV['CONTACT_INBOX']}
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
