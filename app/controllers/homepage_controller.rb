@@ -11,7 +11,8 @@ class HomepageController < ApplicationController
   def create
     contact = Contact.new(contact_params)
     ContactMailer.contact_mail(contact).deliver_now
-    redirect_to('/', notice: 'Message successfully sent.')
+    flash[:success] = "Message successfully sent."
+    redirect_to('/', notice: '')
   end
 
   private
